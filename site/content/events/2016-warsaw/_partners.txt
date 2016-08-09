@@ -1,6 +1,9 @@
 ---
 filter: erb
 ---
+
+<% if false %>
+
 <% @main_partners = [
   { :image => 'allegrotech.png', :name => 'allegro.tech', :link => 'http://allegro.tech/'},
 ]%>
@@ -55,6 +58,8 @@ filter: erb
 <h1>Partners</h1>
 <% @partners.each do |partner| %>
 <a href='<%= partner[:link] %>'><img border=0 alt='<%= partner[:name] %>' title='<%= partner[:name] %>' width=100px height=100px src='<%= File.join('/',@eventhome,"logos/#{partner[:image]}")%>'></a>
+<% end %>
+
 <% end %>
 
 
